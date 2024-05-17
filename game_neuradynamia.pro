@@ -1,8 +1,13 @@
-QT       += core gui
+QT       += \
+        quick \
+        widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11
+# Qt默认是不开启异常的
+CONFIG += \
+        c++11 \
+        exceptions
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -18,16 +23,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     gametimer.cpp \
     main.cpp \
-    mainwindow.cpp
+    myexception.cpp \
+    myutils.cpp
 
 HEADERS += \
     gametimer.h \
-    mainwindow.h
+    myexception.h \
+    myutils.h
 
-FORMS += \
-    mainwindow.ui
+RESOURCES += qml.qrc
+
+# Release版本其他静态文件
+DISTFILES += \
+        other/img/*
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+

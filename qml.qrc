@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="Card.qml">qml/Card.qml</file>
+        <file alias="GamePage.qml">qml/GamePage.qml</file>
+        <file alias="HomePage.qml">qml/HomePage.qml</file>
+        <file alias="main.qml">qml/main.qml</file>
+        <file alias="MultiplayerModePage.qml">qml/MultiplayerModePage.qml</file>
+        <file alias="PlayerComputerPage.qml">qml/PlayerComputerPage.qml</file>
+        <file alias="SettingsPage.qml">qml/SettingsPage.qml</file>
+    </qresource>
+</RCC>
